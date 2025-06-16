@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.82.1",
+  "pnpmVersion": "6.7.1",
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0",
+  "repository": {
+    "url": "https://github.com/StarBlizzard/gaming-chat",
+   "defaultBranch": "master"
+  },
+
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+
+  "telemetryEnabled": false,
+  "allowedProjectTags": [ "server", "util" ],
+  "projects": [
+    {
+      "packageName": "frontend",
+      "projectFolder": "server/server-frontend",
+      "decoupledLocalDependencies": []
+    },
+    {
+      "packageName": "gateway",
+      "projectFolder": "server/server-gateway",
+      "decoupledLocalDependencies": []
+    },
+    {
+      "packageName": "message",
+      "projectFolder": "server/server-message",
+      "decoupledLocalDependencies": []
+    },
+    {
+      "packageName": "user",
+      "projectFolder": "server/server-user",
+      "decoupledLocalDependencies": []
+    }
+  ]
+}
