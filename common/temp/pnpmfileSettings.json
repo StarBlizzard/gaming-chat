@@ -1,0 +1,25 @@
+{
+  "allPreferredVersions": {
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "allowedAlternativeVersions": {},
+  "workspaceVersions": {
+    "server-frontend": "0.1.0",
+    "server-gateway": "1.0.0",
+    "server-message": "1.0.0",
+    "server-user": "1.0.0"
+  },
+  "semverPath": "/Users/yeltzinillanes/.rush/node-v22.16.0/rush-5.82.1/node_modules/semver/index.js",
+  "userPnpmfilePath": "/Users/yeltzinillanes/gaming-chat/common/config/rush/.pnpmfile.cjs"
+}

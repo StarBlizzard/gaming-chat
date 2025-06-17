@@ -19,22 +19,22 @@
   "allowedProjectTags": [ "server", "util" ],
   "projects": [
     {
-      "packageName": "frontend",
+      "packageName": "server-frontend",
       "projectFolder": "server/server-frontend",
       "decoupledLocalDependencies": []
     },
     {
-      "packageName": "gateway",
+      "packageName": "server-gateway",
       "projectFolder": "server/server-gateway",
       "decoupledLocalDependencies": []
     },
     {
-      "packageName": "message",
+      "packageName": "server-message",
       "projectFolder": "server/server-message",
       "decoupledLocalDependencies": []
     },
     {
-      "packageName": "user",
+      "packageName": "server-user",
       "projectFolder": "server/server-user",
       "decoupledLocalDependencies": []
     }
