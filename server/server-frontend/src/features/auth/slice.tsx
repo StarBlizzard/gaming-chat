@@ -8,7 +8,7 @@ interface AuthState {
   loading: boolean;
 }
 
-const AuthSlice = createSlice({
+export const AuthSlice = createSlice({
   name: 'auth',
   initialState: {
     loading: false,

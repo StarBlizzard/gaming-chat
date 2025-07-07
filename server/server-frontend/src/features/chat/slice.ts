@@ -2,7 +2,7 @@ import { createSlice, PayloadAction, ActionReducerMapBuilder } from '@reduxjs/to
 import { Message, Chat } from './types';
 import { getChat } from './thunks';
 
-interface ChatState {
+export interface ChatState {
   chatId?: number;
   messages: Message[];
   type?: string;
@@ -10,7 +10,7 @@ interface ChatState {
   loading: boolean;
 }
 
-const ChatSlice = createSlice({
+export const ChatSlice = createSlice({
   name: 'chat',
   initialState: {
     type: '',

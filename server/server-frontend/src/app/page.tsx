@@ -1,12 +1,20 @@
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        TEST
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        FOOTER
-      </footer>
-    </div>
-  );
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAppSelector } from 'hooks/useAppSelector';
+
+export default function HomePage() {
+  const router = useRouter();
+  const user = useAppSelector((state) => state.auth.user);
+
+  useEffect(() => {
+    if (user) {
+      router.replace('/chat');
+    } else {
+      router.replace('/login');
+    }
+  }, [user]);
+
+  return <div className="text-center mt-10 text-gray-600">Redirecting...</div>;
 }
