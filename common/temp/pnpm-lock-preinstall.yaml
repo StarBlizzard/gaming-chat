@@ -17,12 +17,11 @@ importers:
       eslint: ^9
       eslint-config-next: 15.3.3
       next: 15.3.3
+      next-redux-wrapper: ~8.1.0
       react: ^19.0.0
       react-dom: ^19.0.0
       react-redux: ~9.2.0
-      react-router-dom: ~7.6.2
       redux: ~5.0.1
-      redux-persist: ~6.0.0
       socket.io-client: ~4.8.1
       tailwindcss: ^4
       typescript: ^5
@@ -30,12 +29,11 @@ importers:
       '@reduxjs/toolkit': 2.8.2_react-redux@9.2.0+react@19.1.0
       axios: 1.10.0
       next: 15.3.3_react-dom@19.1.0+react@19.1.0
+      next-redux-wrapper: 8.1.0_aa554d4190304bda2d0909710afa380d
       react: 19.1.0
       react-dom: 19.1.0_react@19.1.0
       react-redux: 9.2.0_a1552409472156803d1f508144397a0d
-      react-router-dom: 7.6.2_react-dom@19.1.0+react@19.1.0
       redux: 5.0.1
-      redux-persist: 6.0.0_redux@5.0.1
       socket.io-client: 4.8.1
     devDependencies:
       '@eslint/eslintrc': 3.3.1
@@ -1334,11 +1332,6 @@ packages:
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
-
-  /cookie/1.0.2:
-    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
-    engines: {node: '>=18'}
-    dev: false
 
   /cross-spawn/7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -2648,6 +2641,18 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
+  /next-redux-wrapper/8.1.0_aa554d4190304bda2d0909710afa380d:
+    resolution: {integrity: sha512-2hIau0hcI6uQszOtrvAFqgc0NkZegKYhBB7ZAKiG3jk7zfuQb4E7OV9jfxViqqojh3SEHdnFfPkN9KErttUKuw==}
+    peerDependencies:
+      next: '>=9'
+      react: '*'
+      react-redux: '*'
+    dependencies:
+      next: 15.3.3_react-dom@19.1.0+react@19.1.0
+      react: 19.1.0
+      react-redux: 9.2.0_a1552409472156803d1f508144397a0d
+    dev: false
+
   /next/15.3.3_react-dom@19.1.0+react@19.1.0:
     resolution: {integrity: sha512-JqNj29hHNmCLtNvd090SyRbXJiivQ+58XjCcrC50Crb5g5u2zi7Y2YivbsEfzk6AtVI80akdOQbaMZwWB1Hthw==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
@@ -2909,45 +2914,9 @@ packages:
       use-sync-external-store: 1.5.0_react@19.1.0
     dev: false
 
-  /react-router-dom/7.6.2_react-dom@19.1.0+react@19.1.0:
-    resolution: {integrity: sha512-Q8zb6VlTbdYKK5JJBLQEN06oTUa/RAbG/oQS1auK1I0TbJOXktqm+QENEVJU6QvWynlXPRBXI3fiOQcSEA78rA==}
-    engines: {node: '>=20.0.0'}
-    peerDependencies:
-      react: '>=18'
-      react-dom: '>=18'
-    dependencies:
-      react: 19.1.0
-      react-dom: 19.1.0_react@19.1.0
-      react-router: 7.6.2_react-dom@19.1.0+react@19.1.0
-    dev: false
-
-  /react-router/7.6.2_react-dom@19.1.0+react@19.1.0:
-    resolution: {integrity: sha512-U7Nv3y+bMimgWjhlT5CRdzHPu2/KVmqPwKUCChW8en5P3znxUqwlYFlbmyj8Rgp1SF6zs5X4+77kBVknkg6a0w==}
-    engines: {node: '>=20.0.0'}
-    peerDependencies:
-      react: '>=18'
-      react-dom: '>=18'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-    dependencies:
-      cookie: 1.0.2
-      react: 19.1.0
-      react-dom: 19.1.0_react@19.1.0
-      set-cookie-parser: 2.7.1
-    dev: false
-
   /react/19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /redux-persist/6.0.0_redux@5.0.1:
-    resolution: {integrity: sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==}
-    peerDependencies:
-      redux: '>4.0.0'
-    dependencies:
-      redux: 5.0.1
     dev: false
 
   /redux-thunk/3.1.0_redux@5.0.1:
@@ -3072,10 +3041,6 @@ packages:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
     engines: {node: '>=10'}
     hasBin: true
-
-  /set-cookie-parser/2.7.1:
-    resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
-    dev: false
 
   /set-function-length/1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}

@@ -12,6 +12,8 @@ export const AuthSlice = createSlice({
   name: 'auth',
   initialState: {
     loading: false,
+    user: undefined,
+    loading: false,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -25,9 +27,11 @@ export const AuthSlice = createSlice({
         state.loading = false;
       })
       .addCase(logout.fulfilled, (state: AuthState, action) => {
-        state.user = {};
-        state.token = '';
+        state.user = undefined;
+        state.token = undefined;
         state.loading = false;
       });
   }
 });
+
+export default AuthSlice.reducer;

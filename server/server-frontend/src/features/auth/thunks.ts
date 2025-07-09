@@ -26,7 +26,8 @@ const mapUser = ({
   mainCharacter: email[0].toUpperCase(),
 });
 
-export const login = createAsyncThunk('auth/login', 
+export const login = createAsyncThunk(
+  'auth/login', 
   async ({ email, password }: Credentials): Promise<{ user: User, token: string }> => {
     const {
       data: {
@@ -35,7 +36,6 @@ export const login = createAsyncThunk('auth/login',
       }
     } = await apiLogin(email, password);
 
-
     return {
       token,
       user: mapUser(user),
@@ -43,9 +43,10 @@ export const login = createAsyncThunk('auth/login',
   },
 );
 
-export const logout = createAsyncThunk('auth/logout', 
+export const logout = createAsyncThunk(
+  'auth/logout', 
   async (): Promise<User> => {
-    await logout();
+    await apiLogout();
 
     return {};
   },

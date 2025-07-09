@@ -1,15 +1,24 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppDispatch } from 'hooks/useAppDispatch';
 import { login } from 'features/auth/thunks';
+import { useRouter } from 'next/navigation';
+import { useAppSelector } from 'hooks/useAppSelector';
 
 export default function Home() {
+  const router = useRouter();
   const dispatch = useDispatch<userAppDispatch>();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const user = useAppSelector((state) => state.auth.user);
+
+  useEffect(() => {
+    if (user) router.push('/chat');
+  }, [user]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,9 +66,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        FOOTER
-      </footer>
     </div>
   );
 }

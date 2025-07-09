@@ -22,6 +22,7 @@ importers:
       react-dom: ^19.0.0
       react-redux: ~9.2.0
       redux: ~5.0.1
+      redux-persist: ~6.0.0
       socket.io-client: ~4.8.1
       tailwindcss: ^4
       typescript: ^5
@@ -34,6 +35,7 @@ importers:
       react-dom: 19.1.0_react@19.1.0
       react-redux: 9.2.0_a1552409472156803d1f508144397a0d
       redux: 5.0.1
+      redux-persist: 6.0.0_redux@5.0.1
       socket.io-client: 4.8.1
     devDependencies:
       '@eslint/eslintrc': 3.3.1
@@ -2917,6 +2919,14 @@ packages:
   /react/19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /redux-persist/6.0.0_redux@5.0.1:
+    resolution: {integrity: sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==}
+    peerDependencies:
+      redux: '>4.0.0'
+    dependencies:
+      redux: 5.0.1
     dev: false
 
   /redux-thunk/3.1.0_redux@5.0.1:
