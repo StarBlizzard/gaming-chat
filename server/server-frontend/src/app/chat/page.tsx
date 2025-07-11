@@ -27,13 +27,12 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm text-black">
-         CHAT PAGE
-        <div className="flex flex-col m-4 bg-red-300 rounded-md p-2 mt-10">
-          <button className="cursor-pointer text-white " onClick={(e) => handleLogout(e)}>
-            Logout
-          </button>
-        </div>
- 
+          CHAT PAGE
+          <div className="flex flex-col m-4 bg-red-300 rounded-md p-2 mt-10">
+            <button className="cursor-pointer text-white " onClick={(e) => handleLogout(e)}>
+              Logout
+            </button>
+          </div>
        </div>
       </main>
     </div>
